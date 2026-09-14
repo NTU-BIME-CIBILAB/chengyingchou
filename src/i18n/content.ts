@@ -159,6 +159,7 @@ export const DOMAIN_CONTENT: Record<Exclude<Domain, 'NA'>, ResearchBlock[]> = {
       en: 'Positron Emission Tomography Image Reconstruction and Software Interface Development',
       zh: '正子造影影像重建與軟體介面開發',
     },
+    { type: 'image', src: 'pet.png' },
     {
       type: 'text',
       en: `In clinical nuclear medicine, administering ultra-low-dose radiotracers has become an inevitable trend for reducing patients' exposure to ionizing radiation, but this also results in positron emission tomography (PET) images plagued by severe noise. We developed a general-purpose blind medical image denoising algorithm. This algorithm autonomously estimates the degree of degradation directly from image content and performs restoration, without requiring prior knowledge of the patient's body type, scanner model, or administered dose ratio, with the aim of helping physicians obtain highly reliable diagnostic evidence under low radiation dose conditions that safeguard patient safety.`,
@@ -259,6 +260,7 @@ export const DOMAIN_CONTENT: Record<Exclude<Domain, 'NA'>, ResearchBlock[]> = {
       en: 'Clinical Multimodal Data Fusion and Early Warning System for Acute Kidney Injury',
       zh: '臨床多模態數據融合與急性腎損傷早期預警系統',
     },
+    { type: 'image', src: 'aki.png' },
     {
       type: 'text',
       en: `In clinical settings, acute kidney injury (AKI), which can deteriorate rapidly in critically ill patients, often causes the golden treatment window to be missed due to the inherent lag of conventional indicators. We combined structured physiological data with unstructured clinical narrative text to develop a cross-modal fusion intelligent early-warning algorithm. The core breakthrough of this algorithm lies in incorporating natural language processing techniques to develop a domain-specific pretrained language model for AKI (AKIBERT), capable of deeply parsing and transforming narrative records within clinical notes; in parallel, the system incorporates XGBoost together with an incremental learning architecture, achieving highly generalizable prospective prediction 24 to 72 hours before onset using only a small set of core features.`,
@@ -287,6 +289,7 @@ export const DOMAIN_CONTENT: Record<Exclude<Domain, 'NA'>, ResearchBlock[]> = {
       en: 'Rapid Saliva-Based Drug Screening Device',
       zh: '毒品唾液快篩檢測',
     },
+    { type: 'image', src: 'drug_screen.png' },
     {
       type: 'text',
       en: `As a flagship project selected among Academia Sinica's National Top Ten Achievements under the "Taiwan Advanced Instrumentation Development Program" for four consecutive years (2017–2020), this research focuses on the deep integration of cutting-edge biomedical sensor hardware development with cross-disciplinary big data intelligent analysis. To overcome the key bottleneck of conventional drug testing, namely its heavy reliance on laboratory procedures, time-consuming workflow, and lack of real-time capability, our team collaborated closely with judicial authorities, medical institutions, and drug policy research organizations to develop a portable rapid saliva-based drug screening device. The core hardware of this device integrates a high-end optical chamber design, a central processing unit, and highly sensitive biosensing components, substantially enhancing signal strength from trace sample collection; on the software side, the system incorporates state-of-the-art image interpretation and big data analytics to perform highly accurate qualitative and quantitative assessments automatically, in real time and on-site outside the laboratory, significantly reducing both false-negative and false-positive rates.`,
