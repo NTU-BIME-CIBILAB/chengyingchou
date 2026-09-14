@@ -12,9 +12,23 @@ function emptyState(lang: Lang): string {
 // Rendered statically with both languages inline; CSS (.lang-en/.lang-zh)
 // toggles them, so no client re-render is needed for language.
 
-function biSpans(en: string, zh: string): string {
-  const e = escapeHtml(en);
-  const z = escapeHtml(zh && zh.trim() ? zh : en);
+/** Wraps exact occurrences of `link.text` (matched post-escaping) in an <a>. */
+function linkify(escaped: string, links?: { text: string; href: string }[]): string {
+  if (!links) return escaped;
+  return links.reduce((html, link) => {
+    const needle = escapeHtml(link.text);
+    const anchor = `<a href="${escapeHtml(link.href)}" target="_blank" rel="noopener" class="underline-offset-2 transition-colors hover:text-brand hover:underline">${needle}</a>`;
+    return html.split(needle).join(anchor);
+  }, escaped);
+}
+
+function biSpans(
+  en: string,
+  zh: string,
+  links?: { text: string; href: string }[],
+): string {
+  const e = linkify(escapeHtml(en), links);
+  const z = linkify(escapeHtml(zh && zh.trim() ? zh : en), links);
   return `<span class="lang-en">${e}</span><span class="lang-zh">${z}</span>`;
 }
 
@@ -26,8 +40,11 @@ function caption(cap: BiPair | undefined): string {
 export function renderDomainBlocks(blocks: ResearchBlock[]): string {
   return blocks
     .map((b) => {
+      if (b.type === 'heading') {
+        return `<h3 class="research-heading">${biSpans(b.en, b.zh)}</h3>`;
+      }
       if (b.type === 'text') {
-        return `<p class="research-text">${biSpans(b.en, b.zh)}</p>`;
+        return `<p class="research-text">${biSpans(b.en, b.zh, b.links)}</p>`;
       }
       if (b.type === 'image') {
         const alt = escapeHtml(b.alt ?? '');
