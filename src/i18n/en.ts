@@ -18,7 +18,7 @@ export const en: Strings = {
     h1: ['Computational Intelligence in', 'Biomedical Imaging Laboratory'],
     subtitle:
       'Department of Biomechatronics Engineering, National Taiwan University',
-    body: 'CIBI Lab develops AI methods that fuse heterogeneous data — medical images with clinical records, agricultural vision with robotic control — to generate insights that single-modality approaches cannot reach. We build tools that matter, grounded in rigorous mathematics and driven by real-world problems.',
+    body: 'CIBI Lab is grounded in medical imaging, applying cutting-edge computer vision to advance clinical diagnosis. Our research began by connecting isolated efforts into cross-modal medical data, and has since grown to bridge medicine and agriculture, forging new connections between biology and mechatronics engineering.',
     ctaResearch: 'Explore research',
     ctaTeam: 'Meet the team',
   },
