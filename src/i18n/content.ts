@@ -134,17 +134,6 @@ export const DOMAIN_CONTENT: Record<Exclude<Domain, 'NA'>, ResearchBlock[]> = {
     },
     {
       type: 'heading',
-      en: 'CT Image Lesion Detection Algorithm for Colorectal Cancer',
-      zh: '結腸直腸癌 CT 影像病灶偵測演算法',
-    },
-    { type: 'image', src: 'colorectal_cancer.png' },
-    {
-      type: 'text',
-      en: `Colorectal cancer tumors, characterized by high morphological heterogeneity and low contrast with surrounding tissue, present a bottleneck for automated segmentation accuracy in conventional single-modality computed tomography (CT) imaging. Although incorporating privileged information such as clinical notes has been shown to effectively improve model performance, this remains constrained in early screening settings prior to diagnosis, where such privileged information is unavailable. To address this practical challenge, we propose an image segmentation algorithm based on multimodal cross attention. This algorithm uses a 3D convolutional neural network as its image feature extraction backbone, combined with a medical domain language encoder, deeply fusing clinical semantic information into the feature extraction process through a multi-scale cross attention mechanism; in addition, the system incorporates a learning using privileged information (LUPI) training strategy together with random feature masking, enabling the model to operate at inference time using only general-purpose prompts, thereby eliminating reliance on patient-specific clinical data during inference.`,
-      zh: `結腸直腸癌腫瘤因形態異質性高且與周圍組織對比度低，導致傳統單一斷層掃描（CT）影像的自動化分割準確度面臨瓶頸。儘管引入病歷描述等特權資訊已被證實能有效提升模型性能，但在尚未確診的早期篩檢階段仍受限於特權資訊缺失。為了解決這項實務痛點，我們提出基於多模態交叉注意力之影像分割演算法。該演算法以 3D 卷積神經網路為影像特徵提取骨幹，並結合醫學領域語言編碼器，透過多尺度交叉注意力機制（Cross Attention），在影像特徵提取的過程中深度融合臨床語義資訊；此外，系統導入特權資訊學習（LUPI）訓練策略與特徵隨機遮蔽技術，使模型在推論階段僅需通用提示詞（Prompt）即可運作，擺脫推論時對特定病患臨床資料的依賴。`,
-    },
-    {
-      type: 'heading',
       en: 'Early Oral Cancer Detection System',
       zh: '口腔癌早期篩檢系統',
     },
@@ -153,6 +142,28 @@ export const DOMAIN_CONTENT: Record<Exclude<Domain, 'NA'>, ResearchBlock[]> = {
       type: 'text',
       en: `Early-stage oral cancer screening relies heavily on physicians' visual observation and palpation, making the diagnostic process time-consuming and highly dependent on subjective clinical expertise. To provide a more objective, convenient, and highly accurate clinical support tool, we developed an early oral lesion screening algorithm based on a two-stage classification architecture. In the first stage, this algorithm automatically detects and marks the location and severity of potential lesions; the second stage then performs category correction and overall risk assessment. Building on this foundation, the team has recently incorporated state-of-the-art multimodal and mixture-of-experts (MoE) deep learning techniques, substantially improving the system's recognition robustness under mobile photography conditions. This algorithm has now been fully engineered into a highly convenient mobile application, featuring multi-site photography guidance and low-latency real-time analysis capabilities.`,
       zh: `早期口腔癌的篩檢高度依賴醫師的肉眼觀察與觸診，診斷過程因此耗時並極具主觀經驗的專業門檻。為提供更客觀、便利且高準確度的臨床輔導工具，我們研發出一套口腔病灶早期篩檢與雙階段分類演算法。該演算法第一階段能自動檢測並標示出潛在病灶的位置與嚴重程度，第二階段則進行類別修正與整體風險評估；在此基礎上，團隊近期更導入前沿的多模態與混合專家模型（MoE）深度學習技術，顯著提升系統在行動拍攝環境下的辨識韌性。目前本演算法已完整工程化並開發為高便利性的行動應用程式，具備多部位拍攝引導功能與低延遲的即時分析能力。`,
+    },
+    {
+      type: 'heading',
+      en: 'Cardiovascular Image Analysis and Non-Invasive Hemodynamic Simulation',
+      zh: '心血管影像分析與非侵入性血液動力學模擬',
+    },
+    { type: 'image', src: 'cardiovascular.png' },
+    {
+      type: 'text',
+      en: `To address coronary artery disease, the leading cause of mortality worldwide, and enhance clinical diagnostic efficacy, integrating computed tomography and angiography with hemodynamic simulation has demonstrated critical potential for non-invasive precision medicine. To this end, our team developed a cardiovascular image registration and reconstruction algorithm that integrates coronary computed tomography angiography (CCTA) with coronary angiography (CAG). This algorithm precisely fuses plaque information from computed tomography with the vessel diameter advantages of angiography, and has recently incorporated state-of-the-art deep learning techniques to automate coronary artery segmentation in CT images; in parallel, the system couples computational fluid dynamics (CFD) with biological anatomical parameter estimation methods to precisely simulate intravascular pressure fields and calculate the clinically critical fractional flow reserve (FFR).`,
+      zh: `為因應全球致命率最高之冠狀動脈疾病並提升臨床診斷效益，將電腦斷層與血管造影結合血液動力學模擬，已展現非侵入性精準醫療的關鍵潛力。為此，本團隊開發了一套整合電腦斷層冠狀動脈血管攝影（CCTA）與冠狀動脈造影（CAG）之心血管影像對位與重建演算法。該演算法精準融合斷層掃描之斑塊資訊與造影之管徑優勢，近期更導入最新深度學習技術以自動化分割 CT 影像冠狀動脈；同時，系統偕同計算流體力學（CFD）與生體解剖參數推估方法，可精準模擬血管內壓力場並計算關鍵之血流儲備分數（FFR）。`,
+    },
+    {
+      type: 'heading',
+      en: 'Pelvic CT-Assisted Opportunistic Prostate Cancer Screening',
+      zh: '腹盆腔CT影像輔助攝護腺癌機會性篩檢',
+    },
+    { type: 'image', src: 'prostate.png' },
+    {
+      type: 'text',
+      en: `Pelvic CT scans are frequently performed for reasons unrelated to the prostate, such as vascular disease, abdominal symptoms, or evaluation of other tumors, and often incidentally cover the prostate region, yet these images are rarely systematically examined for potential prostate cancer lesions. Compared with MRI, CT offers lower contrast resolution for prostate soft tissue, making lesion boundaries more difficult to discern, and since scan protocols are not designed for prostate evaluation, such images have long remained underutilized for early prostate cancer detection. We aim to introduce advanced computer vision techniques to assist opportunistic prostate cancer screening on CT images, sparing patients the need for additional dedicated examinations and the associated radiation exposure this would entail.`,
+      zh: `腹盆腔CT掃描常因血管疾病、腹部症狀或其他腫瘤評估等與攝護腺無關的原因而施行，這些影像中往往附帶涵蓋攝護腺區域，卻極少被系統性地檢視是否存在攝護腺癌病灶。相比MRI影像，CT影像對攝護腺軟組織的對比解析度較低、病灶邊界不易辨識，又掃描條件並非為攝護腺評估而設計，使得這類影像長期以來未被充分利用於攝護腺癌的早期預警。我們期望導入先進電腦視覺技術，以CT影像輔助攝護腺癌機會性篩檢，使病患無須為攝護腺癌篩檢額外安排檢查，也無須因此承受額外的輻射暴露。`,
     },
     {
       type: 'heading',
@@ -167,14 +178,14 @@ export const DOMAIN_CONTENT: Record<Exclude<Domain, 'NA'>, ResearchBlock[]> = {
     },
     {
       type: 'heading',
-      en: 'Cardiovascular Image Analysis and Non-Invasive Hemodynamic Simulation',
-      zh: '心血管影像分析與非侵入性血液動力學模擬',
+      en: 'CT Image Lesion Detection Algorithm for Colorectal Cancer',
+      zh: '結腸直腸癌 CT 影像病灶偵測演算法',
     },
-    { type: 'image', src: 'cardiovascular.png' },
+    { type: 'image', src: 'colorectal_cancer.png' },
     {
       type: 'text',
-      en: `To address coronary artery disease, the leading cause of mortality worldwide, and enhance clinical diagnostic efficacy, integrating computed tomography and angiography with hemodynamic simulation has demonstrated critical potential for non-invasive precision medicine. To this end, our team developed a cardiovascular image registration and reconstruction algorithm that integrates coronary computed tomography angiography (CCTA) with coronary angiography (CAG). This algorithm precisely fuses plaque information from computed tomography with the vessel diameter advantages of angiography, and has recently incorporated state-of-the-art deep learning techniques to automate coronary artery segmentation in CT images; in parallel, the system couples computational fluid dynamics (CFD) with biological anatomical parameter estimation methods to precisely simulate intravascular pressure fields and calculate the clinically critical fractional flow reserve (FFR).`,
-      zh: `為因應全球致命率最高之冠狀動脈疾病並提升臨床診斷效益，將電腦斷層與血管造影結合血液動力學模擬，已展現非侵入性精準醫療的關鍵潛力。為此，本團隊開發了一套整合電腦斷層冠狀動脈血管攝影（CCTA）與冠狀動脈造影（CAG）之心血管影像對位與重建演算法。該演算法精準融合斷層掃描之斑塊資訊與造影之管徑優勢，近期更導入最新深度學習技術以自動化分割 CT 影像冠狀動脈；同時，系統偕同計算流體力學（CFD）與生體解剖參數推估方法，可精準模擬血管內壓力場並計算關鍵之血流儲備分數（FFR）。`,
+      en: `Colorectal cancer tumors, characterized by high morphological heterogeneity and low contrast with surrounding tissue, present a bottleneck for automated segmentation accuracy in conventional single-modality computed tomography (CT) imaging. Although incorporating privileged information such as clinical notes has been shown to effectively improve model performance, this remains constrained in early screening settings prior to diagnosis, where such privileged information is unavailable. To address this practical challenge, we propose an image segmentation algorithm based on multimodal cross attention. This algorithm uses a 3D convolutional neural network as its image feature extraction backbone, combined with a medical domain language encoder, deeply fusing clinical semantic information into the feature extraction process through a multi-scale cross attention mechanism; in addition, the system incorporates a learning using privileged information (LUPI) training strategy together with random feature masking, enabling the model to operate at inference time using only general-purpose prompts, thereby eliminating reliance on patient-specific clinical data during inference.`,
+      zh: `結腸直腸癌腫瘤因形態異質性高且與周圍組織對比度低，導致傳統單一斷層掃描（CT）影像的自動化分割準確度面臨瓶頸。儘管引入病歷描述等特權資訊已被證實能有效提升模型性能，但在尚未確診的早期篩檢階段仍受限於特權資訊缺失。為了解決這項實務痛點，我們提出基於多模態交叉注意力之影像分割演算法。該演算法以 3D 卷積神經網路為影像特徵提取骨幹，並結合醫學領域語言編碼器，透過多尺度交叉注意力機制（Cross Attention），在影像特徵提取的過程中深度融合臨床語義資訊；此外，系統導入特權資訊學習（LUPI）訓練策略與特徵隨機遮蔽技術，使模型在推論階段僅需通用提示詞（Prompt）即可運作，擺脫推論時對特定病患臨床資料的依賴。`,
     },
   ],
   'Smart Agriculture': [
@@ -250,10 +261,11 @@ export const DOMAIN_CONTENT: Record<Exclude<Domain, 'NA'>, ResearchBlock[]> = {
       en: 'Multidimensional Clinical Big Data Fusion and Early Prediction Solution for Sepsis',
       zh: '多維臨床大數據融合與敗血症早期預測解決方案',
     },
+    { type: 'image', src: 'sepsis.png' },
     {
       type: 'text',
-      en: `To address sepsis, a highly lethal condition in intensive care units, and to seize the golden window for treatment, integrating multidimensional clinical big data with deep learning and missing data imputation techniques has demonstrated critical potential for early warning and precision critical care medicine. Targeting incomplete clinical physiological time-series and non-time-series data, we developed an intelligent early sepsis prediction algorithm. This algorithm converts general clinical numerical features into image-encoded inputs and incorporates a self-attention-based deep learning numerical imputation technique to precisely fill in clinical missing values commonly encountered in critically ill patients, substantially improving classification performance on complex physiological features; in parallel, the system couples XGBoost with a convolutional neural network (CNN) architecture, enabling it to reliably issue prospective sepsis warnings several hours before onset using only a small set of key core physiological features, with the aim of effectively assisting clinicians in early medical intervention and reducing patient mortality.`,
-      zh: `為因應加護病房內高致命性之敗血症並把握黃金治療時間，將多維度臨床大數據結合深度學習與缺失數據填補技術，已展現早期預警與精準重症醫療的關鍵潛力。針對不完整臨床生理時序與非時序數據，我們研發出一套智慧敗血症早期預測演算法。該演算法將一般臨床數值特徵轉換為圖像編碼輸入，並融合基於自注意力機制（Self-Attention）的深度學習數值插補技術，精準填補重症病患常見的臨床缺失值，顯著提升複雜生理特徵的分類效能；同時，系統協同 XGBoost 與卷積神經網路（CNN）架構，僅需少量的關鍵核心生理特徵，即可在病患發病前數小時穩定發出敗血症前瞻預警，期能有效協助臨床醫師提前進行醫療干預並降低患者死亡率。`,
+      en: `Sepsis is a critical condition with an extremely high mortality rate in intensive care units, where early prediction can substantially improve patient survival rates. Existing sepsis prediction systems largely rely on statistical regularity-based imputation of missing values, but clinical data commonly exhibit a high proportion of missing not at random (MNAR) patterns, making it difficult for conventional imputation methods to preserve the clinical semantics implicit in these features. We propose a dual-branch hybrid architecture combining a long short-term memory network (LSTM) with a large language model (Llama 3 8B). The LSTM numerical branch models the dynamic trends of time-series data, while the LLM semantic branch captures clinical semantics through template-based text conversion and is fine-tuned using LoRA/DoRA. The two branches are combined through a gated fusion mechanism that adaptively weights their contributions, producing a fused representation that captures both temporal dynamics and clinical semantics. Building on this missing value imputation approach, the model then performs early sepsis prediction through a downstream classifier. Experiments show that this model's performance advantage over other prediction methods grows as data sparsity and prediction horizon increase, maintaining an early warning capability of AUROC = 0.801 as far as 11 hours before onset, providing a preliminary validation foundation for future research combining large language models with clinical time-series data.`,
+      zh: `敗血症為加護病房中死亡率極高之急重症，早期預測能夠大幅提升病患存活率。現有敗血症預測系統大多依賴數值的統計規律插補資料，但臨床數據普遍存在大量非隨機缺失（MNAR）的情形，傳統資料插補方法難以維持特徵隱含的臨床語意。我們提出長短期記憶網路（LSTM）與大型語言模型（Llama 3 8B）之雙分支混合式架構。LSTM數值分支建立時序資料的動態趨勢，LLM語意分支透過模板式文字轉換捕捉臨床語義，並以 LoRA/DoRA 進行微調。兩分支透過門控融合（Gated Fusion）機制調整權重，產出兼具時序動態與臨床語意的融合表示。基於前述缺失值插補，模型再由下游分類器執行敗血症早期預測。實驗顯示，該模型的表現在資料越稀疏、預測時距越長的情形下越高於其他預測方法，於發病前11小時仍可維持AUROC=0.801的早期預警能力，為結合大型語言模型與臨床時序資料之未來研究提供初步驗證基礎。`,
     },
     {
       type: 'heading',
