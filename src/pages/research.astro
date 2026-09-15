@@ -45,6 +45,7 @@ const data = await fetchAllSheets();
         const slug = DOMAIN_SLUG[d];
         return (
           <div class="research-panel" data-domain={slug} hidden={i !== 0}>
+            <p class="research-domain-label mx-auto max-w-3xl">{DOMAIN_LABELS[d].en}</p>
             <div class="research-content mx-auto mb-10 max-w-3xl" set:html={renderDomainBlocks(DOMAIN_CONTENT[d])} />
             <div class="grid gap-10 md:grid-cols-2">
               <div>

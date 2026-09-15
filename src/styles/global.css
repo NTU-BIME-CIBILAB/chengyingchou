@@ -226,6 +226,18 @@ html[data-lang="zh"] #lang-toggle .lang-opt-zh {
   border-color: var(--color-brand-light);
 }
 
+/* Domain name label above the first project in each research panel —
+   bold uppercase Arial, right-aligned, forced to a single line. */
+.research-domain-label {
+  margin: 0 0 1.5rem;
+  font-family: "Alfa Slab One", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  white-space: nowrap;
+  color: #0670a4;
+  font-size: clamp(1rem, 6vw, 1.875rem);
+}
+
 /* Research domain content blocks (heading / text / image / video) */
 .research-heading {
   margin: 2.5rem 0 0.75rem;

@@ -106,8 +106,8 @@ export const PI = {
 
 // Research page content blocks (Spec §8). Each domain is a list of blocks
 // rendered top-to-bottom — heading / text / image / video — so a domain reads
-// like a short blog: a domain overview, then one heading+text(+media) group
-// per research project. Mix and order them freely. ZH text pending for some
+// like a short blog: one heading+text(+media) group per research project,
+// in display order. Mix and order them freely. ZH text pending for some
 // (Spec §17); when a text block's zh is '', the render falls back to en.
 //   - heading: a project title, rendered as a sub-heading above its text
 //   - image: a file under public/assets/research/   e.g. src: 'ct-pipeline.png'
@@ -127,11 +127,6 @@ export type ResearchBlock =
 
 export const DOMAIN_CONTENT: Record<Exclude<Domain, 'NA'>, ResearchBlock[]> = {
   'Medical Image': [
-    {
-      type: 'text',
-      en: 'We develop computational methods for CT reconstruction, X-ray phase-contrast imaging, PET, and AI-assisted diagnosis — fusing imaging data with clinical records for multimodal insight.',
-      zh: '',
-    },
     {
       type: 'heading',
       en: 'Early Oral Cancer Detection System',
@@ -190,11 +185,6 @@ export const DOMAIN_CONTENT: Record<Exclude<Domain, 'NA'>, ResearchBlock[]> = {
   ],
   'Smart Agriculture': [
     {
-      type: 'text',
-      en: 'AIoT systems integrating computer vision with robotic control for precision farming — pest monitoring, crop yield prediction, and honeybee behaviour analysis.',
-      zh: '',
-    },
-    {
       type: 'heading',
       en: 'Integrated Rotary Cultivation Automated Planting System',
       zh: '一貫化旋轉式栽培自動化栽植系統',
@@ -241,11 +231,6 @@ export const DOMAIN_CONTENT: Record<Exclude<Domain, 'NA'>, ResearchBlock[]> = {
   ],
   'Medical Data': [
     {
-      type: 'text',
-      en: 'Statistical and machine learning methods applied to electronic health records, clinical time-series, and multimodal patient data for early disease prediction and risk stratification.',
-      zh: '',
-    },
-    {
       type: 'heading',
       en: 'Multimodal Deep Learning for Computational Aptamer Screening and Affinity Prediction',
       zh: '運用多模態深度學習於適體計算篩選與親和力預測',
@@ -280,11 +265,6 @@ export const DOMAIN_CONTENT: Record<Exclude<Domain, 'NA'>, ResearchBlock[]> = {
     },
   ],
   Biosensing: [
-    {
-      type: 'text',
-      en: 'Rapid diagnostic kit development, aptamer-protein binding prediction, and IoT-integrated biosensor design for clinical and environmental monitoring.',
-      zh: '',
-    },
     {
       type: 'heading',
       en: 'Floating Aquatic Plants and Agro-Livestock Waste Biogas Power Generation System',
