@@ -230,7 +230,7 @@ html[data-lang="zh"] #lang-toggle .lang-opt-zh {
    bold uppercase Arial, right-aligned, forced to a single line. */
 .research-domain-label {
   margin: 0 0 1.5rem;
-  font-family: "Alfa Slab One", Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   text-transform: uppercase;
   text-align: right;
   white-space: nowrap;
