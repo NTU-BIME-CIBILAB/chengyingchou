@@ -177,6 +177,17 @@ export const DOMAIN_CONTENT: Record<Exclude<Domain, 'NA'>, ResearchBlock[]> = {
     },
     {
       type: 'heading',
+      en: 'AED Pad Placement Quality Assessment System',
+      zh: 'AED 電擊貼片放置品質評估系統',
+    },
+    { type: 'image', src: 'aed.png' },
+    {
+      type: 'text',
+      en: `Proper AED (Automated External Defibrillator) pad placement is essential for effective defibrillation, yet considerable variation in pad position and orientation may occur during actual use. This research aims to develop a tool that automatically identifies and quantifies the geometric position and orientation of AED pads relative to anatomical landmarks. By analyzing discrepancies between actual pad placement and recommended positions, this study seeks to establish an objective and reproducible framework for evaluating AED pad placement.`,
+      zh: `正確擺放 AED（自動體外心臟去顫器）電擊貼片是有效電擊除顫的關鍵，然而實際使用時貼片的位置與方向常存在顯著差異。本研究旨在開發一套可自動辨識並量化電擊貼片相對於解剖標誌之幾何位置與方向的工具，透過分析實際貼片放置位置與建議位置之差異，建立一套客觀且可重複之電擊貼片放置評估框架。`,
+    },
+    {
+      type: 'heading',
       en: 'CT Image Lesion Detection Algorithm for Colorectal Cancer',
       zh: '結腸直腸癌 CT 影像病灶偵測演算法',
     },
