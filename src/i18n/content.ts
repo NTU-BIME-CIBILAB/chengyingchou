@@ -44,11 +44,11 @@ export const PI = {
   education: [
     {
       years: '2007–present',
-      role: {
-        en: 'Faculty, NTU Biomechatronics Engineering',
-        zh: '擔任教職，國立臺灣大學生物機電工程學系',
+      role: { en: 'Faculty', zh: '教職' },
+      institution: {
+        en: 'National Taiwan University, Biomechatronics Engineering',
+        zh: '國立臺灣大學，生物機電工程學系',
       },
-      institution: { en: '', zh: '' },
     },
     {
       years: '2005–2007',
@@ -60,8 +60,11 @@ export const PI = {
     },
     {
       years: '2000–2005',
-      role: { en: 'Ph.D., Chemical Engineering', zh: '化學工程博士' },
-      institution: { en: 'Rice University', zh: '萊斯大學' },
+      role: { en: 'Ph.D.', zh: '博士' },
+      institution: {
+        en: 'Rice University, Chemical Engineering',
+        zh: '萊斯大學，化學工程學系',
+      },
     },
   ] as EducationEntry[],
   interests: [
