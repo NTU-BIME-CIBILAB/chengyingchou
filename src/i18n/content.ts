@@ -43,9 +43,12 @@ export const PI = {
   ] as BiPair[],
   education: [
     {
-      years: '2000–2005',
-      role: { en: 'Ph.D., Chemical Engineering', zh: '化學工程博士' },
-      institution: { en: 'Rice University', zh: '萊斯大學' },
+      years: '2007–present',
+      role: {
+        en: 'Faculty, NTU Biomechatronics Engineering',
+        zh: '擔任教職，國立臺灣大學生物機電工程學系',
+      },
+      institution: { en: '', zh: '' },
     },
     {
       years: '2005–2007',
@@ -56,12 +59,9 @@ export const PI = {
       },
     },
     {
-      years: '2007–present',
-      role: {
-        en: 'Professor, NTU Biomechatronics Engineering',
-        zh: '教授，國立臺灣大學生物機電工程學系',
-      },
-      institution: { en: '', zh: '' },
+      years: '2000–2005',
+      role: { en: 'Ph.D., Chemical Engineering', zh: '化學工程博士' },
+      institution: { en: 'Rice University', zh: '萊斯大學' },
     },
   ] as EducationEntry[],
   interests: [
@@ -96,6 +96,7 @@ export const PI = {
       en: 'Exploratory Multivariate Data Analysis',
       zh: '探索式多變量資料分析',
     },
+    { en: 'Random Signal Analysis', zh: '隨機訊號分析' },
   ] as BiPair[],
   contact: {
     tel: '+886-2-3366-9689',

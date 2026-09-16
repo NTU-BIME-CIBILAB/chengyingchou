@@ -170,7 +170,7 @@ GitHub Pages 提供預先編譯好的 HTML / CSS / JS
 |---|---|---|---|---|
 | 成員照片 | `public/assets/members/` | 3:4（直式） | ≤ 200 KB | `firstname-lastname.png` |
 | 活動照片 | `public/assets/gallery/` | 4:3（橫式） | ≤ 300 KB | `YYYY-活動名稱-NN.png` |
-| 教授照片 | `public/assets/pi/` | 4:3（橫式） | ≤ 300 KB | `chou-cheng-ying.png` |
+| 教授照片 | `public/assets/pi/` | 3:4（直式） | ≤ 300 KB | `chou-cheng-ying.png` |
 
 > 上傳前請先壓縮圖片，推薦使用免費工具 [Squoosh](https://squoosh.app)（網頁版，不需安裝）。JPEG 品質設定 80 即可。
 

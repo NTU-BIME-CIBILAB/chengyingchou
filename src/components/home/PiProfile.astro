@@ -12,13 +12,13 @@ const photo = assetUrl('pi', PI.photo, 'default.png');
   <div class="grid gap-10 md:grid-cols-[1fr_2fr]">
     <!-- Left: photo + identity -->
     <div data-animate data-anim-scale="0.97" data-anim-duration="500">
-      <div class="aspect-[4/3] w-full overflow-hidden rounded-xl bg-brand-wash">
+      <div class="aspect-[3/4] w-full overflow-hidden rounded-xl bg-brand-wash">
         <img
           src={photo}
           alt={PI.name.en}
           class="h-full w-full object-cover"
-          width="400"
-          height="300"
+          width="300"
+          height="400"
           onerror={`this.onerror=null;this.src='${assetUrl('pi', '', 'default.png')}'`}
         />
       </div>
