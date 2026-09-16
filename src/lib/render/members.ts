@@ -33,7 +33,7 @@ function currentCard(m: Member, lang: Lang): string {
   const email = m.email
     ? `<a href="mailto:${escapeHtml(m.email)}" class="mt-1 block truncate text-xs text-brand-mid transition-colors hover:text-brand">${escapeHtml(m.email)}</a>`
     : '';
-  return `<div class="w-[120px] shrink-0">
+  return `<div class="md:w-[120px] md:shrink-0">
       ${photo(m)}
       <p class="mt-2 text-sm font-medium text-heading">${name}</p>
       <span class="pill-group ${g.cls} mt-1">${g.label}</span>
@@ -51,7 +51,7 @@ function alumniCard(m: Member, lang: Lang): string {
   const titleHtml = hasUrl
     ? `<a href="${escapeHtml(m.thesis_url)}" target="_blank" rel="noopener" class="text-brand-mid underline-offset-2 transition-colors hover:text-brand hover:underline">${title}</a>`
     : title;
-  return `<div class="w-[140px] shrink-0">
+  return `<div class="md:w-[140px] md:shrink-0">
       ${photo(m)}
       <p class="mt-2 text-sm font-medium text-heading">${name}<span class="font-normal text-muted">${yr}</span></p>
       <div class="mt-1 flex flex-wrap gap-1">

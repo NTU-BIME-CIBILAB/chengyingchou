@@ -35,7 +35,7 @@ const sections: { key: TeamSection; en: string; zh: string }[] = [
           </h2>
           <div
             id={`team-${s.key}`}
-            class="flex flex-wrap gap-6"
+            class="grid grid-cols-[repeat(auto-fit,minmax(110px,1fr))] gap-6 md:flex md:flex-wrap"
             set:html={renderMembers(data.members, s.key, 'en')}
           />
         </div>

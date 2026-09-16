@@ -9,7 +9,7 @@ import { escapeHtml } from '../dom';
 function domainTag(domain: Domain): string {
   const cls = DOMAIN_TAG_CLASS[domain as Exclude<Domain, 'NA'>];
   if (!cls) return '';
-  return `<span class="tag ${cls} self-start">${escapeHtml(domain)}</span>`;
+  return `<span class="tag ${cls}">${escapeHtml(domain)}</span>`;
 }
 
 function row(p: Publication): string {
@@ -20,10 +20,13 @@ function row(p: Publication): string {
   const citeHtml = p.doi
     ? `<a href="${escapeHtml(p.doi)}" target="_blank" rel="noopener" class="transition-colors hover:text-brand">${cite}</a>`
     : cite;
-  return `<div class="flex items-start gap-3 border-b border-brand-light/50 py-3">
-      <span class="pub-badge ${badgeCls} mt-0.5">${badgeTxt}</span>
-      <p class="citation flex-1 text-body">${citeHtml}</p>
-      ${domainTag(p.domain)}
+  const tag = domainTag(p.domain);
+  return `<div class="border-b border-brand-light/50 py-3">
+      <div class="flex items-start gap-3">
+        <span class="pub-badge ${badgeCls} mt-0.5">${badgeTxt}</span>
+        <p class="citation min-w-0 flex-1 text-body">${citeHtml}</p>
+      </div>
+      ${tag ? `<div class="mt-2 flex justify-end">${tag}</div>` : ''}
     </div>`;
 }
 
